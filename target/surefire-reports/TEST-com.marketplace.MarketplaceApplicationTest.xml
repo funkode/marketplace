@@ -1,0 +1,3497 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="12" failures="9" name="com.marketplace.MarketplaceApplicationTest" time="3.882" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib"/>
+    <property name="java.vm.version" value="25.152-b16"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/preddy/private/work/maat/marketplace"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/preddy/private/work/maat/marketplace"/>
+    <property name="java.runtime.version" value="1.8.0_152-b16"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/ym/k1wms4yd7ngcwwwwftvqc6580000gn/T/"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/Users/preddy/apache-maven-3.5.2/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/preddy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="maven.conf" value="/Users/preddy/apache-maven-3.5.2/conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.13.3"/>
+    <property name="library.jansi.path" value="/Users/preddy/apache-maven-3.5.2/lib/jansi-native"/>
+    <property name="user.home" value="/Users/preddy"/>
+    <property name="user.timezone" value="America/Los_Angeles"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="preddy"/>
+    <property name="java.class.path" value="/Users/preddy/apache-maven-3.5.2/boot/plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean package"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_152"/>
+    <property name="java.ext.dirs" value="/Users/preddy/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/Users/preddy/apache-maven-3.5.2"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase classname="com.marketplace.MarketplaceApplicationTest" name="testA1PostUser" time="0.387"/>
+  <testcase classname="com.marketplace.MarketplaceApplicationTest" name="testA2GetUser" time="0.068"/>
+  <testcase classname="com.marketplace.MarketplaceApplicationTest" name="testA3PutProject" time="0.05">
+    <failure message="Status expected:&lt;200&gt; but was:&lt;400&gt;" type="java.lang.AssertionError">java.lang.AssertionError: Status expected:&lt;200&gt; but was:&lt;400&gt;
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:54)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:81)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers$10.match(StatusResultMatchers.java:665)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:171)
+	at com.marketplace.MarketplaceApplicationTest.testA3PutProject(MarketplaceApplicationTest.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /api/v1/project
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.create(com.marketplace.project.model.Project,org.springframework.validation.BindingResult)]
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [class com.marketplace.project.model.Project] as &quot;application/json;charset=UTF-8&quot; with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@25a290ee]
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.ServletInvocableHandlerMethod - Failed to resolve argument 0 of type &apos;com.marketplace.project.model.Project&apos;
+org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character (&apos;&quot;&apos; (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (&apos;&quot;&apos; (code 34)): was expecting comma to separate Object entries
+ at [Source: java.io.PushbackInputStream@45d46254; line: 5, column: 4]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:238)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:223)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:201)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:128)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:158)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:128)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:65)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:167)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:155)
+	at com.marketplace.MarketplaceApplicationTest.testA3PutProject(MarketplaceApplicationTest.java:98)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (&apos;&quot;&apos; (code 34)): was expecting comma to separate Object entries
+ at [Source: java.io.PushbackInputStream@45d46254; line: 5, column: 4]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1702)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:558)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:456)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:761)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:389)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1191)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:314)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:148)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3814)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2938)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:235)
+	... 71 common frames omitted
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolving exception from handler [public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.create(com.marketplace.project.model.Project,org.springframework.validation.BindingResult)]: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character (&apos;&quot;&apos; (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (&apos;&quot;&apos; (code 34)): was expecting comma to separate Object entries
+ at [Source: java.io.PushbackInputStream@45d46254; line: 5, column: 4]
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Invoking @ExceptionHandler method: public final org.springframework.http.ResponseEntity&lt;java.lang.Object&gt; org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler.handleException(java.lang.Exception,org.springframework.web.context.request.WebRequest)
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/user
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.create(com.marketplace.user.model.User,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:1,&quot;firstName&quot;:&quot;Greg&quot;,&quot;lastName&quot;:&quot;Chappel&quot;,&quot;email&quot;:&quot;greg@nowhere.com&quot;,&quot;phone&quot;:&quot;6876876868&quot;,&quot;type&quot;:&quot;user&quot;,&quot;status&quot;:&quot;active&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/user
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.create(com.marketplace.user.model.User,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:2,&quot;firstName&quot;:&quot;Ian&quot;,&quot;lastName&quot;:&quot;Gloud&quot;,&quot;email&quot;:&quot;ian@nowhere.com&quot;,&quot;phone&quot;:&quot;9098978907&quot;,&quot;type&quot;:&quot;user&quot;,&quot;status&quot;:&quot;active&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/user/1
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.getUser(java.lang.Integer)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:1,&quot;firstName&quot;:&quot;Greg&quot;,&quot;lastName&quot;:&quot;Chappel&quot;,&quot;email&quot;:&quot;greg@nowhere.com&quot;,&quot;phone&quot;:&quot;6876876868&quot;,&quot;type&quot;:&quot;user&quot;,&quot;status&quot;:&quot;active&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/project
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.create(com.marketplace.project.model.Project,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.http.converter.HttpMessageNotReadableException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {}
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+</system-out>
+  </testcase>
+  <testcase classname="com.marketplace.MarketplaceApplicationTest" name="testA4GetProject" time="0.026">
+    <failure message="Status expected:&lt;200&gt; but was:&lt;400&gt;" type="java.lang.AssertionError">java.lang.AssertionError: Status expected:&lt;200&gt; but was:&lt;400&gt;
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:54)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:81)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers$10.match(StatusResultMatchers.java:665)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:171)
+	at com.marketplace.MarketplaceApplicationTest.testA4GetProject(MarketplaceApplicationTest.java:123)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /api/v1/project/1
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.getProject(java.lang.Integer)]
+2018-02-11 23:09:31 [main] DEBUG c.m.p.controller.ProjectController - Fetching project for id 1
+2018-02-11 23:09:31 [main] DEBUG com.marketplace.base.AbstractService - Fetching Project with id: 1
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolving exception from handler [public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.getProject(java.lang.Integer)]: com.marketplace.common.exception.ProjectNotFoundException: project.not.found
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Invoking @ExceptionHandler method: public org.springframework.http.ResponseEntity&lt;java.lang.Object&gt; com.marketplace.common.exception.RestResponseExceptionHandler.handleDuplicateResourceException(java.lang.Exception,org.springframework.web.context.request.WebRequest)
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Written [project.not.found] as &quot;application/json&quot; using [org.springframework.http.converter.StringHttpMessageConverter@7196a8f1]
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/user
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.create(com.marketplace.user.model.User,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:1,&quot;firstName&quot;:&quot;Greg&quot;,&quot;lastName&quot;:&quot;Chappel&quot;,&quot;email&quot;:&quot;greg@nowhere.com&quot;,&quot;phone&quot;:&quot;6876876868&quot;,&quot;type&quot;:&quot;user&quot;,&quot;status&quot;:&quot;active&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/user
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.create(com.marketplace.user.model.User,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:2,&quot;firstName&quot;:&quot;Ian&quot;,&quot;lastName&quot;:&quot;Gloud&quot;,&quot;email&quot;:&quot;ian@nowhere.com&quot;,&quot;phone&quot;:&quot;9098978907&quot;,&quot;type&quot;:&quot;user&quot;,&quot;status&quot;:&quot;active&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/user/1
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.getUser(java.lang.Integer)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:1,&quot;firstName&quot;:&quot;Greg&quot;,&quot;lastName&quot;:&quot;Chappel&quot;,&quot;email&quot;:&quot;greg@nowhere.com&quot;,&quot;phone&quot;:&quot;6876876868&quot;,&quot;type&quot;:&quot;user&quot;,&quot;status&quot;:&quot;active&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/project
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.create(com.marketplace.project.model.Project,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.http.converter.HttpMessageNotReadableException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {}
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/project/1
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.getProject(java.lang.Integer)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ProjectNotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8], Content-Length=[17]}
+     Content type = application/json;charset=UTF-8
+             Body = project.not.found
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+</system-out>
+  </testcase>
+  <testcase classname="com.marketplace.MarketplaceApplicationTest" name="testA5GetAllOpenProject" time="0.034">
+    <failure message="No value at JSON path &quot;$[0].name&quot;, exception: No results for path: $[0][&apos;name&apos;]" type="java.lang.AssertionError">java.lang.AssertionError: No value at JSON path &quot;$[0].name&quot;, exception: No results for path: $[0][&apos;name&apos;]
+	at org.springframework.test.util.JsonPathExpectationsHelper.evaluateJsonPath(JsonPathExpectationsHelper.java:245)
+	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:99)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers$2.match(JsonPathResultMatchers.java:100)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:171)
+	at com.marketplace.MarketplaceApplicationTest.testA5GetAllOpenProject(MarketplaceApplicationTest.java:145)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /api/v1/project/open
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public java.util.Collection&lt;com.marketplace.project.model.ProjectDto&gt; com.marketplace.project.controller.ProjectController.getOpenProjects()]
+2018-02-11 23:09:31 [main] DEBUG c.m.p.controller.ProjectController - Fetching all open projects
+2018-02-11 23:09:31 [main] DEBUG c.m.p.service.ProjectServiceImpl - Fetching expired projects based on date Mon Feb 12 07:09:31 UTC 2018
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [[]] as &quot;application/json&quot; using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@25a290ee]
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/user
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.create(com.marketplace.user.model.User,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:1,&quot;firstName&quot;:&quot;Greg&quot;,&quot;lastName&quot;:&quot;Chappel&quot;,&quot;email&quot;:&quot;greg@nowhere.com&quot;,&quot;phone&quot;:&quot;6876876868&quot;,&quot;type&quot;:&quot;user&quot;,&quot;status&quot;:&quot;active&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/user
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.create(com.marketplace.user.model.User,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:2,&quot;firstName&quot;:&quot;Ian&quot;,&quot;lastName&quot;:&quot;Gloud&quot;,&quot;email&quot;:&quot;ian@nowhere.com&quot;,&quot;phone&quot;:&quot;9098978907&quot;,&quot;type&quot;:&quot;user&quot;,&quot;status&quot;:&quot;active&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/user/1
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.getUser(java.lang.Integer)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:1,&quot;firstName&quot;:&quot;Greg&quot;,&quot;lastName&quot;:&quot;Chappel&quot;,&quot;email&quot;:&quot;greg@nowhere.com&quot;,&quot;phone&quot;:&quot;6876876868&quot;,&quot;type&quot;:&quot;user&quot;,&quot;status&quot;:&quot;active&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/project
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.create(com.marketplace.project.model.Project,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.http.converter.HttpMessageNotReadableException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {}
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/project/1
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.getProject(java.lang.Integer)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ProjectNotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8], Content-Length=[17]}
+     Content type = application/json;charset=UTF-8
+             Body = project.not.found
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/project/open
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public java.util.Collection&lt;com.marketplace.project.model.ProjectDto&gt; com.marketplace.project.controller.ProjectController.getOpenProjects()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = []
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+</system-out>
+  </testcase>
+  <testcase classname="com.marketplace.MarketplaceApplicationTest" name="testA6PutBid" time="0.043">
+    <failure message="Status expected:&lt;200&gt; but was:&lt;400&gt;" type="java.lang.AssertionError">java.lang.AssertionError: Status expected:&lt;200&gt; but was:&lt;400&gt;
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:54)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:81)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers$10.match(StatusResultMatchers.java:665)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:171)
+	at com.marketplace.MarketplaceApplicationTest.testA6PutBid(MarketplaceApplicationTest.java:160)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /api/v1/bid
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.marketplace.bid.model.BidDto com.marketplace.bid.controller.BidController.create(com.marketplace.bid.model.BidDto,org.springframework.validation.BindingResult)]
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [class com.marketplace.bid.model.BidDto] as &quot;application/json;charset=UTF-8&quot; with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@25a290ee]
+2018-02-11 23:09:31 [main] DEBUG com.marketplace.base.BaseController - Checking binding result for field errors
+2018-02-11 23:09:31 [main] DEBUG com.marketplace.base.BaseController - No errors found.
+2018-02-11 23:09:31 [main] DEBUG c.m.bid.controller.BidController - Creating Bid BidDto(super=BidBase(super=com.marketplace.bid.model.BidDto@dd5, estimatedCompletionDate=Wed Dec 25 21:55:59 UTC 2019, status=null, quote=999), userId=1, projectId=1)
+2018-02-11 23:09:31 [main] DEBUG c.m.bid.service.BidServiceImpl - Fetching Bid for user 1 and project 1
+2018-02-11 23:09:31 [main] DEBUG com.marketplace.base.AbstractService - Fetching Project with id: 1
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolving exception from handler [public com.marketplace.bid.model.BidDto com.marketplace.bid.controller.BidController.create(com.marketplace.bid.model.BidDto,org.springframework.validation.BindingResult)]: com.marketplace.common.exception.ProjectNotFoundException: project.not.found
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Invoking @ExceptionHandler method: public org.springframework.http.ResponseEntity&lt;java.lang.Object&gt; com.marketplace.common.exception.RestResponseExceptionHandler.handleDuplicateResourceException(java.lang.Exception,org.springframework.web.context.request.WebRequest)
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Written [project.not.found] as &quot;text/plain&quot; using [org.springframework.http.converter.StringHttpMessageConverter@7196a8f1]
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/user
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.create(com.marketplace.user.model.User,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:1,&quot;firstName&quot;:&quot;Greg&quot;,&quot;lastName&quot;:&quot;Chappel&quot;,&quot;email&quot;:&quot;greg@nowhere.com&quot;,&quot;phone&quot;:&quot;6876876868&quot;,&quot;type&quot;:&quot;user&quot;,&quot;status&quot;:&quot;active&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/user
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.create(com.marketplace.user.model.User,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:2,&quot;firstName&quot;:&quot;Ian&quot;,&quot;lastName&quot;:&quot;Gloud&quot;,&quot;email&quot;:&quot;ian@nowhere.com&quot;,&quot;phone&quot;:&quot;9098978907&quot;,&quot;type&quot;:&quot;user&quot;,&quot;status&quot;:&quot;active&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/user/1
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.getUser(java.lang.Integer)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:1,&quot;firstName&quot;:&quot;Greg&quot;,&quot;lastName&quot;:&quot;Chappel&quot;,&quot;email&quot;:&quot;greg@nowhere.com&quot;,&quot;phone&quot;:&quot;6876876868&quot;,&quot;type&quot;:&quot;user&quot;,&quot;status&quot;:&quot;active&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/project
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.create(com.marketplace.project.model.Project,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.http.converter.HttpMessageNotReadableException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {}
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/project/1
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.getProject(java.lang.Integer)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ProjectNotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8], Content-Length=[17]}
+     Content type = application/json;charset=UTF-8
+             Body = project.not.found
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/project/open
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public java.util.Collection&lt;com.marketplace.project.model.ProjectDto&gt; com.marketplace.project.controller.ProjectController.getOpenProjects()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = []
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/bid
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.bid.controller.BidController
+           Method = public com.marketplace.bid.model.BidDto com.marketplace.bid.controller.BidController.create(com.marketplace.bid.model.BidDto,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ProjectNotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[17]}
+     Content type = text/plain;charset=UTF-8
+             Body = project.not.found
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+</system-out>
+  </testcase>
+  <testcase classname="com.marketplace.MarketplaceApplicationTest" name="testA6PutNewLowestBid" time="0.022">
+    <failure message="Status expected:&lt;200&gt; but was:&lt;400&gt;" type="java.lang.AssertionError">java.lang.AssertionError: Status expected:&lt;200&gt; but was:&lt;400&gt;
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:54)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:81)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers$10.match(StatusResultMatchers.java:665)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:171)
+	at com.marketplace.MarketplaceApplicationTest.testA6PutNewLowestBid(MarketplaceApplicationTest.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /api/v1/bid
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.marketplace.bid.model.BidDto com.marketplace.bid.controller.BidController.create(com.marketplace.bid.model.BidDto,org.springframework.validation.BindingResult)]
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [class com.marketplace.bid.model.BidDto] as &quot;application/json;charset=UTF-8&quot; with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@25a290ee]
+2018-02-11 23:09:31 [main] DEBUG com.marketplace.base.BaseController - Checking binding result for field errors
+2018-02-11 23:09:31 [main] DEBUG com.marketplace.base.BaseController - No errors found.
+2018-02-11 23:09:31 [main] DEBUG c.m.bid.controller.BidController - Creating Bid BidDto(super=BidBase(super=com.marketplace.bid.model.BidDto@e10, estimatedCompletionDate=Tue Dec 25 21:55:59 UTC 2018, status=null, quote=99), userId=2, projectId=1)
+2018-02-11 23:09:31 [main] DEBUG c.m.bid.service.BidServiceImpl - Fetching Bid for user 2 and project 1
+2018-02-11 23:09:31 [main] DEBUG com.marketplace.base.AbstractService - Fetching Project with id: 1
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolving exception from handler [public com.marketplace.bid.model.BidDto com.marketplace.bid.controller.BidController.create(com.marketplace.bid.model.BidDto,org.springframework.validation.BindingResult)]: com.marketplace.common.exception.ProjectNotFoundException: project.not.found
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Invoking @ExceptionHandler method: public org.springframework.http.ResponseEntity&lt;java.lang.Object&gt; com.marketplace.common.exception.RestResponseExceptionHandler.handleDuplicateResourceException(java.lang.Exception,org.springframework.web.context.request.WebRequest)
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Written [project.not.found] as &quot;text/plain&quot; using [org.springframework.http.converter.StringHttpMessageConverter@7196a8f1]
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/user
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.create(com.marketplace.user.model.User,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:1,&quot;firstName&quot;:&quot;Greg&quot;,&quot;lastName&quot;:&quot;Chappel&quot;,&quot;email&quot;:&quot;greg@nowhere.com&quot;,&quot;phone&quot;:&quot;6876876868&quot;,&quot;type&quot;:&quot;user&quot;,&quot;status&quot;:&quot;active&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/user
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.create(com.marketplace.user.model.User,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:2,&quot;firstName&quot;:&quot;Ian&quot;,&quot;lastName&quot;:&quot;Gloud&quot;,&quot;email&quot;:&quot;ian@nowhere.com&quot;,&quot;phone&quot;:&quot;9098978907&quot;,&quot;type&quot;:&quot;user&quot;,&quot;status&quot;:&quot;active&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/user/1
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.getUser(java.lang.Integer)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:1,&quot;firstName&quot;:&quot;Greg&quot;,&quot;lastName&quot;:&quot;Chappel&quot;,&quot;email&quot;:&quot;greg@nowhere.com&quot;,&quot;phone&quot;:&quot;6876876868&quot;,&quot;type&quot;:&quot;user&quot;,&quot;status&quot;:&quot;active&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/project
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.create(com.marketplace.project.model.Project,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.http.converter.HttpMessageNotReadableException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {}
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/project/1
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.getProject(java.lang.Integer)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ProjectNotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8], Content-Length=[17]}
+     Content type = application/json;charset=UTF-8
+             Body = project.not.found
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/project/open
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public java.util.Collection&lt;com.marketplace.project.model.ProjectDto&gt; com.marketplace.project.controller.ProjectController.getOpenProjects()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = []
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/bid
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.bid.controller.BidController
+           Method = public com.marketplace.bid.model.BidDto com.marketplace.bid.controller.BidController.create(com.marketplace.bid.model.BidDto,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ProjectNotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[17]}
+     Content type = text/plain;charset=UTF-8
+             Body = project.not.found
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/bid
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.bid.controller.BidController
+           Method = public com.marketplace.bid.model.BidDto com.marketplace.bid.controller.BidController.create(com.marketplace.bid.model.BidDto,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ProjectNotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[17]}
+     Content type = text/plain;charset=UTF-8
+             Body = project.not.found
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+</system-out>
+  </testcase>
+  <testcase classname="com.marketplace.MarketplaceApplicationTest" name="testA7LowestBidOnProject" time="0.014">
+    <failure message="Status expected:&lt;200&gt; but was:&lt;400&gt;" type="java.lang.AssertionError">java.lang.AssertionError: Status expected:&lt;200&gt; but was:&lt;400&gt;
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:54)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:81)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers$10.match(StatusResultMatchers.java:665)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:171)
+	at com.marketplace.MarketplaceApplicationTest.testA7LowestBidOnProject(MarketplaceApplicationTest.java:192)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /api/v1/project/1
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.getProject(java.lang.Integer)]
+2018-02-11 23:09:31 [main] DEBUG c.m.p.controller.ProjectController - Fetching project for id 1
+2018-02-11 23:09:31 [main] DEBUG com.marketplace.base.AbstractService - Fetching Project with id: 1
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolving exception from handler [public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.getProject(java.lang.Integer)]: com.marketplace.common.exception.ProjectNotFoundException: project.not.found
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Invoking @ExceptionHandler method: public org.springframework.http.ResponseEntity&lt;java.lang.Object&gt; com.marketplace.common.exception.RestResponseExceptionHandler.handleDuplicateResourceException(java.lang.Exception,org.springframework.web.context.request.WebRequest)
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Written [project.not.found] as &quot;application/json&quot; using [org.springframework.http.converter.StringHttpMessageConverter@7196a8f1]
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/user
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.create(com.marketplace.user.model.User,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:1,&quot;firstName&quot;:&quot;Greg&quot;,&quot;lastName&quot;:&quot;Chappel&quot;,&quot;email&quot;:&quot;greg@nowhere.com&quot;,&quot;phone&quot;:&quot;6876876868&quot;,&quot;type&quot;:&quot;user&quot;,&quot;status&quot;:&quot;active&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/user
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.create(com.marketplace.user.model.User,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:2,&quot;firstName&quot;:&quot;Ian&quot;,&quot;lastName&quot;:&quot;Gloud&quot;,&quot;email&quot;:&quot;ian@nowhere.com&quot;,&quot;phone&quot;:&quot;9098978907&quot;,&quot;type&quot;:&quot;user&quot;,&quot;status&quot;:&quot;active&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/user/1
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.getUser(java.lang.Integer)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:1,&quot;firstName&quot;:&quot;Greg&quot;,&quot;lastName&quot;:&quot;Chappel&quot;,&quot;email&quot;:&quot;greg@nowhere.com&quot;,&quot;phone&quot;:&quot;6876876868&quot;,&quot;type&quot;:&quot;user&quot;,&quot;status&quot;:&quot;active&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/project
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.create(com.marketplace.project.model.Project,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.http.converter.HttpMessageNotReadableException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {}
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/project/1
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.getProject(java.lang.Integer)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ProjectNotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8], Content-Length=[17]}
+     Content type = application/json;charset=UTF-8
+             Body = project.not.found
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/project/open
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public java.util.Collection&lt;com.marketplace.project.model.ProjectDto&gt; com.marketplace.project.controller.ProjectController.getOpenProjects()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = []
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/bid
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.bid.controller.BidController
+           Method = public com.marketplace.bid.model.BidDto com.marketplace.bid.controller.BidController.create(com.marketplace.bid.model.BidDto,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ProjectNotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[17]}
+     Content type = text/plain;charset=UTF-8
+             Body = project.not.found
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/bid
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.bid.controller.BidController
+           Method = public com.marketplace.bid.model.BidDto com.marketplace.bid.controller.BidController.create(com.marketplace.bid.model.BidDto,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ProjectNotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[17]}
+     Content type = text/plain;charset=UTF-8
+             Body = project.not.found
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/project/1
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.getProject(java.lang.Integer)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ProjectNotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8], Content-Length=[17]}
+     Content type = application/json;charset=UTF-8
+             Body = project.not.found
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+</system-out>
+  </testcase>
+  <testcase classname="com.marketplace.MarketplaceApplicationTest" name="testA9BidForExpiredProject" time="0.073"/>
+  <testcase classname="com.marketplace.MarketplaceApplicationTest" name="testB1PutExcessiveBid" time="0.049">
+    <failure message="Status expected:&lt;200&gt; but was:&lt;400&gt;" type="java.lang.AssertionError">java.lang.AssertionError: Status expected:&lt;200&gt; but was:&lt;400&gt;
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:54)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:81)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers$10.match(StatusResultMatchers.java:665)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:171)
+	at com.marketplace.MarketplaceApplicationTest.testB1PutExcessiveBid(MarketplaceApplicationTest.java:251)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /api/v1/user
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.marketplace.user.model.User com.marketplace.user.controller.UserController.create(com.marketplace.user.model.User,org.springframework.validation.BindingResult)]
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [class com.marketplace.user.model.User] as &quot;application/json;charset=UTF-8&quot; with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@25a290ee]
+2018-02-11 23:09:31 [main] DEBUG com.marketplace.base.BaseController - Checking binding result for field errors
+2018-02-11 23:09:31 [main] DEBUG com.marketplace.base.BaseController - No errors found.
+2018-02-11 23:09:31 [main] DEBUG c.m.user.controller.UserController - Creating user User(super=com.marketplace.user.model.User@6d3fac12, id=null, firstName=David, lastName=Lancer, email=david@nowhere.com, phone=9998978907, type=USER, status=null)
+2018-02-11 23:09:31 [main] DEBUG c.m.user.service.UserServiceImpl - Fetching User by email: david@nowhere.com
+2018-02-11 23:09:31 [main] DEBUG c.m.user.service.UserServiceImpl - Fetching User by phone: 9998978907
+2018-02-11 23:09:31 [main] DEBUG c.m.user.controller.UserController - Registering new user User(super=com.marketplace.user.model.User@6d3fac12, id=null, firstName=David, lastName=Lancer, email=david@nowhere.com, phone=9998978907, type=USER, status=null)
+2018-02-11 23:09:31 [main] DEBUG com.marketplace.base.AbstractService - Saving User: User(super=com.marketplace.user.model.User@6d3fac12, id=null, firstName=David, lastName=Lancer, email=david@nowhere.com, phone=9998978907, type=USER, status=null)
+2018-02-11 23:09:31 [main] DEBUG c.m.user.controller.UserController - User created User(super=com.marketplace.user.model.User@97050eaa, id=3, firstName=David, lastName=Lancer, email=david@nowhere.com, phone=9998978907, type=USER, status=null)
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [User(super=com.marketplace.user.model.User@97050eaa, id=3, firstName=David, lastName=Lancer, email=david@nowhere.com, phone=9998978907, type=USER, status=null)] as &quot;application/json&quot; using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@25a290ee]
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /api/v1/bid
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.marketplace.bid.model.BidDto com.marketplace.bid.controller.BidController.create(com.marketplace.bid.model.BidDto,org.springframework.validation.BindingResult)]
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [class com.marketplace.bid.model.BidDto] as &quot;application/json;charset=UTF-8&quot; with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@25a290ee]
+2018-02-11 23:09:31 [main] DEBUG com.marketplace.base.BaseController - Checking binding result for field errors
+2018-02-11 23:09:31 [main] DEBUG com.marketplace.base.BaseController - No errors found.
+2018-02-11 23:09:31 [main] DEBUG c.m.bid.controller.BidController - Creating Bid BidDto(super=BidBase(super=com.marketplace.bid.model.BidDto@e4b, estimatedCompletionDate=Tue Dec 25 21:55:59 UTC 2018, status=null, quote=899), userId=3, projectId=1)
+2018-02-11 23:09:31 [main] DEBUG c.m.bid.service.BidServiceImpl - Fetching Bid for user 3 and project 1
+2018-02-11 23:09:31 [main] DEBUG com.marketplace.base.AbstractService - Fetching Project with id: 1
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolving exception from handler [public com.marketplace.bid.model.BidDto com.marketplace.bid.controller.BidController.create(com.marketplace.bid.model.BidDto,org.springframework.validation.BindingResult)]: com.marketplace.common.exception.ExpiredResourceException: project.bidding.closed
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Invoking @ExceptionHandler method: public org.springframework.http.ResponseEntity&lt;java.lang.Object&gt; com.marketplace.common.exception.RestResponseExceptionHandler.handleDuplicateResourceException(java.lang.Exception,org.springframework.web.context.request.WebRequest)
+2018-02-11 23:09:31 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Written [project.bidding.closed] as &quot;text/plain&quot; using [org.springframework.http.converter.StringHttpMessageConverter@7196a8f1]
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/user
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.create(com.marketplace.user.model.User,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:1,&quot;firstName&quot;:&quot;Greg&quot;,&quot;lastName&quot;:&quot;Chappel&quot;,&quot;email&quot;:&quot;greg@nowhere.com&quot;,&quot;phone&quot;:&quot;6876876868&quot;,&quot;type&quot;:&quot;user&quot;,&quot;status&quot;:&quot;active&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/user
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.create(com.marketplace.user.model.User,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:2,&quot;firstName&quot;:&quot;Ian&quot;,&quot;lastName&quot;:&quot;Gloud&quot;,&quot;email&quot;:&quot;ian@nowhere.com&quot;,&quot;phone&quot;:&quot;9098978907&quot;,&quot;type&quot;:&quot;user&quot;,&quot;status&quot;:&quot;active&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/user/1
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.getUser(java.lang.Integer)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:1,&quot;firstName&quot;:&quot;Greg&quot;,&quot;lastName&quot;:&quot;Chappel&quot;,&quot;email&quot;:&quot;greg@nowhere.com&quot;,&quot;phone&quot;:&quot;6876876868&quot;,&quot;type&quot;:&quot;user&quot;,&quot;status&quot;:&quot;active&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/project
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.create(com.marketplace.project.model.Project,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.http.converter.HttpMessageNotReadableException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {}
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/project/1
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.getProject(java.lang.Integer)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ProjectNotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8], Content-Length=[17]}
+     Content type = application/json;charset=UTF-8
+             Body = project.not.found
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/project/open
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public java.util.Collection&lt;com.marketplace.project.model.ProjectDto&gt; com.marketplace.project.controller.ProjectController.getOpenProjects()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = []
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/bid
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.bid.controller.BidController
+           Method = public com.marketplace.bid.model.BidDto com.marketplace.bid.controller.BidController.create(com.marketplace.bid.model.BidDto,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ProjectNotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[17]}
+     Content type = text/plain;charset=UTF-8
+             Body = project.not.found
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/bid
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.bid.controller.BidController
+           Method = public com.marketplace.bid.model.BidDto com.marketplace.bid.controller.BidController.create(com.marketplace.bid.model.BidDto,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ProjectNotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[17]}
+     Content type = text/plain;charset=UTF-8
+             Body = project.not.found
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/project/1
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.getProject(java.lang.Integer)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ProjectNotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8], Content-Length=[17]}
+     Content type = application/json;charset=UTF-8
+             Body = project.not.found
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/project
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.create(com.marketplace.project.model.Project,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:1,&quot;name&quot;:&quot;Test Project 3&quot;,&quot;description&quot;:&quot;Test Project Description 3&quot;,&quot;bidEndDate&quot;:&quot;12-25-2010 21:55:59&quot;,&quot;status&quot;:&quot;open&quot;,&quot;createdBy&quot;:1}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/bid
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.bid.controller.BidController
+           Method = public com.marketplace.bid.model.BidDto com.marketplace.bid.controller.BidController.create(com.marketplace.bid.model.BidDto,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ProjectNotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[17]}
+     Content type = text/plain;charset=UTF-8
+             Body = project.not.found
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/user
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.create(com.marketplace.user.model.User,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:3,&quot;firstName&quot;:&quot;David&quot;,&quot;lastName&quot;:&quot;Lancer&quot;,&quot;email&quot;:&quot;david@nowhere.com&quot;,&quot;phone&quot;:&quot;9998978907&quot;,&quot;type&quot;:&quot;user&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/bid
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.bid.controller.BidController
+           Method = public com.marketplace.bid.model.BidDto com.marketplace.bid.controller.BidController.create(com.marketplace.bid.model.BidDto,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ExpiredResourceException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[22]}
+     Content type = text/plain;charset=UTF-8
+             Body = project.bidding.closed
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+</system-out>
+  </testcase>
+  <testcase classname="com.marketplace.MarketplaceApplicationTest" name="testB2VerifyBidStatusUpdate" time="3.055">
+    <failure message="No value at JSON path &quot;$.lowestBid.quote&quot;, exception: Missing property in path $[&apos;lowestBid&apos;]" type="java.lang.AssertionError">java.lang.AssertionError: No value at JSON path &quot;$.lowestBid.quote&quot;, exception: Missing property in path $[&apos;lowestBid&apos;]
+	at org.springframework.test.util.JsonPathExpectationsHelper.evaluateJsonPath(JsonPathExpectationsHelper.java:245)
+	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:99)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers$2.match(JsonPathResultMatchers.java:100)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:171)
+	at com.marketplace.MarketplaceApplicationTest.testB2VerifyBidStatusUpdate(MarketplaceApplicationTest.java:280)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>2018-02-11 23:09:31 [main] DEBUG com.marketplace.base.AbstractService - Fetching Project with id: 1
+2018-02-11 23:09:31 [main] DEBUG c.m.e.l.BidddingExpiredEventListener - Received ProjectBidExpiredEvent for project Project(super=ProjectBase(super=com.marketplace.project.model.Project@66, id=1, name=Test Project 3, description=Test Project Description 3, bidEndDate=2010-12-25 21:55:59.0, status=OPEN, createdBy=1), lowestBidUserId=null)
+2018-02-11 23:09:31 [main] DEBUG com.marketplace.base.AbstractService - Saving Project: Project(super=ProjectBase(super=com.marketplace.project.model.Project@66, id=1, name=Test Project 3, description=Test Project Description 3, bidEndDate=2010-12-25 21:55:59.0, status=CLOSED, createdBy=1), lowestBidUserId=null)
+2018-02-11 23:09:31 [main] DEBUG c.m.e.l.BidddingExpiredEventListener - Closed project Project(super=ProjectBase(super=com.marketplace.project.model.Project@66, id=1, name=Test Project 3, description=Test Project Description 3, bidEndDate=2010-12-25 21:55:59.0, status=CLOSED, createdBy=1), lowestBidUserId=null)
+2018-02-11 23:09:31 [main] DEBUG c.m.MarketplaceApplicationTest - Sleeping for 3000 milliseconds to allow event propogation
+2018-02-11 23:09:34 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /api/v1/project/1
+2018-02-11 23:09:34 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.getProject(java.lang.Integer)]
+2018-02-11 23:09:34 [main] DEBUG c.m.p.controller.ProjectController - Fetching project for id 1
+2018-02-11 23:09:34 [main] DEBUG com.marketplace.base.AbstractService - Fetching Project with id: 1
+2018-02-11 23:09:34 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [ProjectDto(super=ProjectBase(super=com.marketplace.project.model.ProjectDto@66, id=1, name=Test Project 3, description=Test Project Description 3, bidEndDate=2010-12-25 21:55:59.0, status=CLOSED, createdBy=1), lowestBid=null)] as &quot;application/json&quot; using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@25a290ee]
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/user
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.create(com.marketplace.user.model.User,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:1,&quot;firstName&quot;:&quot;Greg&quot;,&quot;lastName&quot;:&quot;Chappel&quot;,&quot;email&quot;:&quot;greg@nowhere.com&quot;,&quot;phone&quot;:&quot;6876876868&quot;,&quot;type&quot;:&quot;user&quot;,&quot;status&quot;:&quot;active&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/user
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.create(com.marketplace.user.model.User,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:2,&quot;firstName&quot;:&quot;Ian&quot;,&quot;lastName&quot;:&quot;Gloud&quot;,&quot;email&quot;:&quot;ian@nowhere.com&quot;,&quot;phone&quot;:&quot;9098978907&quot;,&quot;type&quot;:&quot;user&quot;,&quot;status&quot;:&quot;active&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/user/1
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.getUser(java.lang.Integer)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:1,&quot;firstName&quot;:&quot;Greg&quot;,&quot;lastName&quot;:&quot;Chappel&quot;,&quot;email&quot;:&quot;greg@nowhere.com&quot;,&quot;phone&quot;:&quot;6876876868&quot;,&quot;type&quot;:&quot;user&quot;,&quot;status&quot;:&quot;active&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/project
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.create(com.marketplace.project.model.Project,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.http.converter.HttpMessageNotReadableException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {}
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/project/1
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.getProject(java.lang.Integer)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ProjectNotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8], Content-Length=[17]}
+     Content type = application/json;charset=UTF-8
+             Body = project.not.found
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/project/open
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public java.util.Collection&lt;com.marketplace.project.model.ProjectDto&gt; com.marketplace.project.controller.ProjectController.getOpenProjects()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = []
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/bid
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.bid.controller.BidController
+           Method = public com.marketplace.bid.model.BidDto com.marketplace.bid.controller.BidController.create(com.marketplace.bid.model.BidDto,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ProjectNotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[17]}
+     Content type = text/plain;charset=UTF-8
+             Body = project.not.found
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/bid
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.bid.controller.BidController
+           Method = public com.marketplace.bid.model.BidDto com.marketplace.bid.controller.BidController.create(com.marketplace.bid.model.BidDto,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ProjectNotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[17]}
+     Content type = text/plain;charset=UTF-8
+             Body = project.not.found
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/project/1
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.getProject(java.lang.Integer)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ProjectNotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8], Content-Length=[17]}
+     Content type = application/json;charset=UTF-8
+             Body = project.not.found
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/project
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.create(com.marketplace.project.model.Project,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:1,&quot;name&quot;:&quot;Test Project 3&quot;,&quot;description&quot;:&quot;Test Project Description 3&quot;,&quot;bidEndDate&quot;:&quot;12-25-2010 21:55:59&quot;,&quot;status&quot;:&quot;open&quot;,&quot;createdBy&quot;:1}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/bid
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.bid.controller.BidController
+           Method = public com.marketplace.bid.model.BidDto com.marketplace.bid.controller.BidController.create(com.marketplace.bid.model.BidDto,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ProjectNotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[17]}
+     Content type = text/plain;charset=UTF-8
+             Body = project.not.found
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/user
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.create(com.marketplace.user.model.User,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:3,&quot;firstName&quot;:&quot;David&quot;,&quot;lastName&quot;:&quot;Lancer&quot;,&quot;email&quot;:&quot;david@nowhere.com&quot;,&quot;phone&quot;:&quot;9998978907&quot;,&quot;type&quot;:&quot;user&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/bid
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.bid.controller.BidController
+           Method = public com.marketplace.bid.model.BidDto com.marketplace.bid.controller.BidController.create(com.marketplace.bid.model.BidDto,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ExpiredResourceException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[22]}
+     Content type = text/plain;charset=UTF-8
+             Body = project.bidding.closed
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/project/1
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.getProject(java.lang.Integer)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:1,&quot;name&quot;:&quot;Test Project 3&quot;,&quot;description&quot;:&quot;Test Project Description 3&quot;,&quot;bidEndDate&quot;:&quot;12-25-2010 21:55:59&quot;,&quot;status&quot;:&quot;closed&quot;,&quot;createdBy&quot;:1}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+</system-out>
+  </testcase>
+  <testcase classname="com.marketplace.MarketplaceApplicationTest" name="testB3DuplicateProject" time="0.061">
+    <failure message="Range for response status value 200 expected:&lt;CLIENT_ERROR&gt; but was:&lt;SUCCESSFUL&gt;" type="java.lang.AssertionError">java.lang.AssertionError: Range for response status value 200 expected:&lt;CLIENT_ERROR&gt; but was:&lt;SUCCESSFUL&gt;
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:54)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:81)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers$6.match(StatusResultMatchers.java:120)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:171)
+	at com.marketplace.MarketplaceApplicationTest.testB3DuplicateProject(MarketplaceApplicationTest.java:312)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>2018-02-11 23:09:34 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /api/v1/project
+2018-02-11 23:09:34 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.create(com.marketplace.project.model.Project,org.springframework.validation.BindingResult)]
+2018-02-11 23:09:34 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [class com.marketplace.project.model.Project] as &quot;application/json;charset=UTF-8&quot; with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@25a290ee]
+2018-02-11 23:09:34 [main] DEBUG com.marketplace.base.BaseController - Checking binding result for field errors
+2018-02-11 23:09:34 [main] DEBUG com.marketplace.base.BaseController - No errors found.
+2018-02-11 23:09:34 [main] DEBUG c.m.p.controller.ProjectController - Creating Project Project(super=ProjectBase(super=com.marketplace.project.model.Project@66, id=null, name=Test Project 2, description=Test Project Description 2, bidEndDate=Fri Dec 25 21:55:59 UTC 2020, status=null, createdBy=1), lowestBidUserId=null)
+2018-02-11 23:09:34 [main] DEBUG c.m.p.service.ProjectServiceImpl - Fetching Project by name: Test Project 2
+2018-02-11 23:09:34 [main] DEBUG com.marketplace.base.AbstractService - Fetching User with id: 1
+2018-02-11 23:09:34 [main] DEBUG c.m.p.controller.ProjectController - Registering new project Project(super=ProjectBase(super=com.marketplace.project.model.Project@66, id=null, name=Test Project 2, description=Test Project Description 2, bidEndDate=Fri Dec 25 21:55:59 UTC 2020, status=null, createdBy=1), lowestBidUserId=null)
+2018-02-11 23:09:34 [main] DEBUG com.marketplace.base.AbstractService - Saving Project: Project(super=ProjectBase(super=com.marketplace.project.model.Project@66, id=null, name=Test Project 2, description=Test Project Description 2, bidEndDate=Fri Dec 25 21:55:59 UTC 2020, status=OPEN, createdBy=1), lowestBidUserId=null)
+2018-02-11 23:09:34 [main] DEBUG c.m.p.controller.ProjectController - Project created Project(super=ProjectBase(super=com.marketplace.project.model.Project@66, id=2, name=Test Project 2, description=Test Project Description 2, bidEndDate=Fri Dec 25 21:55:59 UTC 2020, status=OPEN, createdBy=1), lowestBidUserId=null)
+2018-02-11 23:09:34 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [ProjectDto(super=ProjectBase(super=com.marketplace.project.model.ProjectDto@66, id=2, name=Test Project 2, description=Test Project Description 2, bidEndDate=Fri Dec 25 21:55:59 UTC 2020, status=OPEN, createdBy=1), lowestBid=null)] as &quot;application/json&quot; using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@25a290ee]
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/user
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.create(com.marketplace.user.model.User,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:1,&quot;firstName&quot;:&quot;Greg&quot;,&quot;lastName&quot;:&quot;Chappel&quot;,&quot;email&quot;:&quot;greg@nowhere.com&quot;,&quot;phone&quot;:&quot;6876876868&quot;,&quot;type&quot;:&quot;user&quot;,&quot;status&quot;:&quot;active&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/user
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.create(com.marketplace.user.model.User,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:2,&quot;firstName&quot;:&quot;Ian&quot;,&quot;lastName&quot;:&quot;Gloud&quot;,&quot;email&quot;:&quot;ian@nowhere.com&quot;,&quot;phone&quot;:&quot;9098978907&quot;,&quot;type&quot;:&quot;user&quot;,&quot;status&quot;:&quot;active&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/user/1
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.getUser(java.lang.Integer)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:1,&quot;firstName&quot;:&quot;Greg&quot;,&quot;lastName&quot;:&quot;Chappel&quot;,&quot;email&quot;:&quot;greg@nowhere.com&quot;,&quot;phone&quot;:&quot;6876876868&quot;,&quot;type&quot;:&quot;user&quot;,&quot;status&quot;:&quot;active&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/project
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.create(com.marketplace.project.model.Project,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.http.converter.HttpMessageNotReadableException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {}
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/project/1
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.getProject(java.lang.Integer)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ProjectNotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8], Content-Length=[17]}
+     Content type = application/json;charset=UTF-8
+             Body = project.not.found
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/project/open
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public java.util.Collection&lt;com.marketplace.project.model.ProjectDto&gt; com.marketplace.project.controller.ProjectController.getOpenProjects()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = []
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/bid
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.bid.controller.BidController
+           Method = public com.marketplace.bid.model.BidDto com.marketplace.bid.controller.BidController.create(com.marketplace.bid.model.BidDto,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ProjectNotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[17]}
+     Content type = text/plain;charset=UTF-8
+             Body = project.not.found
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/bid
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.bid.controller.BidController
+           Method = public com.marketplace.bid.model.BidDto com.marketplace.bid.controller.BidController.create(com.marketplace.bid.model.BidDto,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ProjectNotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[17]}
+     Content type = text/plain;charset=UTF-8
+             Body = project.not.found
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/project/1
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.getProject(java.lang.Integer)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ProjectNotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8], Content-Length=[17]}
+     Content type = application/json;charset=UTF-8
+             Body = project.not.found
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/project
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.create(com.marketplace.project.model.Project,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:1,&quot;name&quot;:&quot;Test Project 3&quot;,&quot;description&quot;:&quot;Test Project Description 3&quot;,&quot;bidEndDate&quot;:&quot;12-25-2010 21:55:59&quot;,&quot;status&quot;:&quot;open&quot;,&quot;createdBy&quot;:1}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/bid
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.bid.controller.BidController
+           Method = public com.marketplace.bid.model.BidDto com.marketplace.bid.controller.BidController.create(com.marketplace.bid.model.BidDto,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ProjectNotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[17]}
+     Content type = text/plain;charset=UTF-8
+             Body = project.not.found
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/user
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.user.controller.UserController
+           Method = public com.marketplace.user.model.User com.marketplace.user.controller.UserController.create(com.marketplace.user.model.User,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:3,&quot;firstName&quot;:&quot;David&quot;,&quot;lastName&quot;:&quot;Lancer&quot;,&quot;email&quot;:&quot;david@nowhere.com&quot;,&quot;phone&quot;:&quot;9998978907&quot;,&quot;type&quot;:&quot;user&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/bid
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.bid.controller.BidController
+           Method = public com.marketplace.bid.model.BidDto com.marketplace.bid.controller.BidController.create(com.marketplace.bid.model.BidDto,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.marketplace.common.exception.ExpiredResourceException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[22]}
+     Content type = text/plain;charset=UTF-8
+             Body = project.bidding.closed
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/project/1
+       Parameters = {}
+          Headers = {Accept=[application/json]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.getProject(java.lang.Integer)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:1,&quot;name&quot;:&quot;Test Project 3&quot;,&quot;description&quot;:&quot;Test Project Description 3&quot;,&quot;bidEndDate&quot;:&quot;12-25-2010 21:55:59&quot;,&quot;status&quot;:&quot;closed&quot;,&quot;createdBy&quot;:1}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/project
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = com.marketplace.project.controller.ProjectController
+           Method = public com.marketplace.project.model.ProjectDto com.marketplace.project.controller.ProjectController.create(com.marketplace.project.model.Project,org.springframework.validation.BindingResult)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:2,&quot;name&quot;:&quot;Test Project 2&quot;,&quot;description&quot;:&quot;Test Project Description 2&quot;,&quot;bidEndDate&quot;:&quot;12-25-2020 21:55:59&quot;,&quot;status&quot;:&quot;open&quot;,&quot;createdBy&quot;:1}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+</system-out>
+  </testcase>
+</testsuite>
