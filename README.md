@@ -1,8 +1,9 @@
-#Welcome to Marketplace
-**Marketplace** exposes a set of RESTful services to register a project (Seller) for bidding by self employed (Buyer).
-Interested buyers can view the open projects and submit the bid. System keeps track of the lowest bid and buyer can always
-keeps track on the current lowest bid. On reaching the deadline for bidding, system closes the project and grants the
-praject for the user with the lowest bid.
+**Welcome to Marketplace**
+
+Marketplace exposes a set of RESTful services to register a project(Seller) for bidding by self-employed (Buyer).
+Interested buyers can view the open projects and submit the bid. System keeps track of the lowest bid, seller can view
+the project details to find out how its trading. On reaching the deadline for bidding, system closes the project and grants the
+project for the user with the lowest bid.
 
 **Time Spent:**
  Approx 12 Hours
@@ -42,17 +43,20 @@ praject for the user with the lowest bid.
 * https://stackoverflow.com/questions/43404891/how-to-configure-java-annotation-processors-in-eclipse
 
 **Running from source folder with gradle**
+
 gradle build && java -jar build/libs/marketoplace.jar
 
 **Running from source folder with maven**
+
 mvn package spring-boot:repackage && java -jar target/marketplace-1.0-SNAPSHOT.jara
 --OR-
 mvn spring-boot:run
 
 **Verification**
+
 Once the application is up, open the Marketplace.postman_collection in postman and follow the below steps.
 * Register User
-* Register Project (5 or 10 minutes to go as End date in UTC, System is cofigured to use UTC as default time zone)
+* Register Project (5 or 10 minutes to go as End date in UTC, System is configured to use UTC as default time zone)
 * Get All Open Projects
 * Register User (With diff email and phone) - Code does not check for the user, so you can use the same user (Yes its a defect)
 * Submit Bid
