@@ -1,0 +1,353 @@
+{
+	"id": "fc8312ab-403e-4e46-439b-4aef372700fe",
+	"name": "Marketplace",
+	"description": "",
+	"order": [
+		"c8dc91f5-9ad9-7292-7ff7-36afdd150cb5",
+		"094854c6-0445-d28c-67b9-b411385d008e",
+		"12f23f9e-edbd-2912-0d5a-09da02df10bf",
+		"bb37b111-43b8-4925-e141-ff584f072b96",
+		"eb12dabe-557a-0347-1cae-3889fedccdc0",
+		"ba378e3c-9a5d-5e19-3bf2-34a9334e4e70",
+		"051c6c45-5e26-afdf-03bc-314d3afc6ec7",
+		"c57bc031-f550-a195-ddd0-5b4b0da14ae4",
+		"41eed6c9-ae37-5794-7cd2-e1c7bceb764e"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1518300311293,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "051c6c45-5e26-afdf-03bc-314d3afc6ec7",
+			"headers": "Content-Type: application/json\n//Accept: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://localhost:8080/api/v1/user/email?email=greg@nowhere.com",
+			"queryParams": [
+				{
+					"key": "email",
+					"value": "greg@nowhere.com",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518408273837,
+			"name": "Get User By Email",
+			"description": "",
+			"collectionId": "fc8312ab-403e-4e46-439b-4aef372700fe",
+			"responses": []
+		},
+		{
+			"id": "094854c6-0445-d28c-67b9-b411385d008e",
+			"headers": "Content-Type: application/json\nAccept: application/json\n//Authorization: Bearer {{client-access-token}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{client-access-token}}",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://localhost:8080/api/v1project",
+			"folder": "3991ee8e-f01f-2552-615f-4b8f08607b3a",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518408166477,
+			"name": "Register Project",
+			"description": "",
+			"collectionId": "fc8312ab-403e-4e46-439b-4aef372700fe",
+			"responses": [],
+			"rawModeData": "{\n  \"name\": \"Test Project 1\",\n  \"description\":\"Test Project description 1\",\n  \"bidEndDate\":\"12-24-2018 21:55:59\"\n}"
+		},
+		{
+			"id": "12f23f9e-edbd-2912-0d5a-09da02df10bf",
+			"headers": "Content-Type: application/json\n//Accept: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://localhost:8080/api/v1/user/1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518408240465,
+			"name": "Get User By Id",
+			"description": "",
+			"collectionId": "fc8312ab-403e-4e46-439b-4aef372700fe",
+			"responses": []
+		},
+		{
+			"id": "41eed6c9-ae37-5794-7cd2-e1c7bceb764e",
+			"headers": "Content-Type: application/json\n//Accept: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://localhost:8080/api/v1/project/open",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518408211329,
+			"name": "Get All Open Projects",
+			"description": "",
+			"collectionId": "fc8312ab-403e-4e46-439b-4aef372700fe",
+			"responses": []
+		},
+		{
+			"id": "ba378e3c-9a5d-5e19-3bf2-34a9334e4e70",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/v1/bid",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518408200136,
+			"name": "Submit Bid",
+			"description": "",
+			"collectionId": "fc8312ab-403e-4e46-439b-4aef372700fe",
+			"responses": [],
+			"rawModeData": "{\n  \"projectId\" : \"1\",\n  \"userId\": \"1\",\n  \"quote\":\"999\",\n  \"estimatedCompletionDate\":\"12-21-2018 21:21:21\"\n}"
+		},
+		{
+			"id": "bb37b111-43b8-4925-e141-ff584f072b96",
+			"headers": "Content-Type: application/json\n//Accept: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://localhost:8080/api/v1/project/1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518408220555,
+			"name": "Get Project By Id",
+			"description": "",
+			"collectionId": "fc8312ab-403e-4e46-439b-4aef372700fe",
+			"responses": []
+		},
+		{
+			"id": "c57bc031-f550-a195-ddd0-5b4b0da14ae4",
+			"headers": "Content-Type: application/json\n//Accept: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://localhost:8080/api/v1/bid/project/1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518408182373,
+			"name": "Get All Bids For project",
+			"description": "",
+			"collectionId": "fc8312ab-403e-4e46-439b-4aef372700fe",
+			"responses": []
+		},
+		{
+			"id": "c8dc91f5-9ad9-7292-7ff7-36afdd150cb5",
+			"headers": "Content-Type: application/json\nAccept: application/json\nAuthorization: Bearer {{client-access-token}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{client-access-token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/v1user",
+			"folder": "3991ee8e-f01f-2552-615f-4b8f08607b3a",
+			"queryParams": [],
+			"preRequestScript": "postman.setEnvironmentVariable(\"counter\", Math.floor(Math.random() * (1000000 - 1) + 1));",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518408145585,
+			"name": "Register User",
+			"description": "",
+			"collectionId": "fc8312ab-403e-4e46-439b-4aef372700fe",
+			"responses": [],
+			"rawModeData": "{\n  \"firstName\":\"Greg\",\n  \"lastName\":\"Chappel\",\n  \"email\": \"greg@nowhere.com\",\n  \"phone\":\"8105581824\",\n  \"type\":\"user\"\n}"
+		},
+		{
+			"id": "eb12dabe-557a-0347-1cae-3889fedccdc0",
+			"headers": "Content-Type: application/json\n//Accept: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://localhost:8080/api/v1/project/name/Test Project 1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518408262865,
+			"name": "Get Project By Name",
+			"description": "",
+			"collectionId": "fc8312ab-403e-4e46-439b-4aef372700fe",
+			"responses": []
+		}
+	]
+}

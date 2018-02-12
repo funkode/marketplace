@@ -1,0 +1,72 @@
+group 'com.marketplace'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    ext {
+        springBootVersion = '1.5.6.RELEASE'
+        springJpaVersion = '2.0.0.RELEASE'
+        springVersion = '5.0.3.RELEASE'
+
+        axonVersion = '3.0.6'
+        jacksonJsr310Version = '2.9.0'
+        lombokVersion = '1.16.16'
+
+        h2Version = '1.4.196'
+
+        junitVersion = '4.12'
+        mockitoVersion = '2.9.0'
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath('io.spring.gradle:dependency-management-plugin:1.0.3.RELEASE')
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'maven'
+
+jar {
+    baseName = 'marketplace'
+    archiveName = 'marketoplace.jar'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+configurations {
+    compile.exclude module: 'spring-boot-starter-tomcat'
+}
+
+dependencies {
+    compile(
+            "org.springframework.boot:spring-boot-starter-web",
+            "org.springframework.boot:spring-boot-starter-jetty",
+            "org.springframework.boot:spring-boot-starter-data-jpa",
+
+            "org.springframework.retry:spring-retry",
+            "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:${jacksonJsr310Version}",
+            "org.projectlombok:lombok:${lombokVersion}",
+
+            "com.h2database:h2:${h2Version}",
+            'javax.persistence:javax.persistence-api:2.2'
+    )
+
+    testCompile(
+            "junit:junit:${junitVersion}",
+            "org.springframework.boot:spring-boot-starter-test",
+            "org.mockito:mockito-core:${mockitoVersion}"
+    )
+}
