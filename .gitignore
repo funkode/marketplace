@@ -1,0 +1,8 @@
+target
+target/**
+out
+out/**
+build
+build/**
+.settings
+.settings/**
